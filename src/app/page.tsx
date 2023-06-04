@@ -31,39 +31,46 @@ export default function Home() {
             Gênesis
           </span>
         </h1>
+
         <p className="text-2xl font-bold text-center">Adquira conhecimento através da origem</p>
       </main>
 
-      <section id="tree" className="px-4 sm:px-8">
-        <div >
-          <h2 className="text-lime-600">Árvore</h2>
-          <p>Uma planta perene, de tronco lenhoso, que apresenta ramos e folhas.</p>
-
-          <a href="https://wope.com/">ACESSA AQUI VAGABUNDO</a>
+      <section id="tree">
+        <div className="px-4 sm:px-8">
+          <h2 className="flex justify-center text-lime-600 text-4xl font-bold">Árvores</h2>
+          <p className="flex justify-center text-xl font-semibold mb-12">Uma planta perene, de tronco lenhoso, que apresenta ramos e folhas.</p>
         </div>
 
         <TreeArticle
           title="Semente"
           description="As sementes podem ser encontradas em diferentes formatos, tamanhos e cores, variando de acordo com a espécie da planta."
           href="/tree/seed"
+          imgUrl="/images/semente.jpg"
+          side="left"
         />
 
         <TreeArticle
           title="Folha"
           description="As folhas são estruturas fundamentais para a sobrevivência das plantas, responsáveis pela realização da fotossíntese."
           href="/tree/leaf"
+          imgUrl="/images/folha.jpg"
+          side="right"
         />
 
         <TreeArticle
           title="Flor"
           description="Elas são consideradas uma das mais belas criações da natureza, apresentando uma grande diversidade de cores, formas e perfumes."
           href="/tree/flower"
+          imgUrl="/images/flor.jpg"
+          side="left"
         />
 
         <TreeArticle
           title="Fruta"
           description="Elas são amplamente consumidas em todo o mundo e apresentam uma grande diversidade de cores, sabores e texturas."
           href="/tree/fruit"
+          imgUrl="/images/fruta.jpg"
+          side="right"
         />
       </section>
 
