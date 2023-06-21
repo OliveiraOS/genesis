@@ -1,18 +1,13 @@
-import Image from "next/image";
-import { HeaderButtons } from "@/components/HeaderButtons"
-import { TreeArticle } from "@/components/TreeArticle"
+import { HeaderButtons } from "@/components/HeaderButtons";
+import { Logo } from "@/components/Logo";
+import { TreeArticle } from "@/components/TreeArticle";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <header className="h-32 px-4 sm:px-8 relative bg-base-200 flex justify-center items-center">
-        <div className="relative w-14 h-20 sm:w-20 sm:h-28">
-          <Image
-            src="/images/logo.png"
-            alt="Gênesis logo"
-            fill={true}
-          />
-        </div>
+        <Logo />
 
         <div className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 flex gap-2">
           <HeaderButtons />
@@ -21,7 +16,9 @@ export default function Home() {
 
       <nav className="bg-base-100 flex justify-center py-1">
         <a href="/#tree">Árvore</a>
-        <a href="/#about" className="absolute right-4 sm:right-8">Sobre</a>
+        <a href="/#about" className="absolute right-4 sm:right-8">
+          Sobre
+        </a>
       </nav>
 
       <main className="h-[calc(100vh-160px)] px-4 sm:px-8 flex flex-col justify-center items-center">
@@ -32,13 +29,20 @@ export default function Home() {
           </span>
         </h1>
 
-        <p className="text-2xl font-bold text-center">Adquira conhecimento através da origem</p>
+        <p className="text-2xl font-bold text-center">
+          Adquira conhecimento através da origem
+        </p>
       </main>
 
       <section id="tree">
         <div className="px-4 sm:px-8">
-          <h2 className="flex justify-center text-lime-600 text-4xl font-bold">Árvores</h2>
-          <p className="flex justify-center text-xl font-semibold mb-12">Uma planta perene, de tronco lenhoso, que apresenta ramos e folhas.</p>
+          <h2 className="flex justify-center text-lime-600 text-4xl font-bold">
+            Árvores
+          </h2>
+
+          <p className="flex justify-center text-xl text-center font-semibold mb-12">
+            Uma planta perene, de tronco lenhoso, que apresenta ramos e folhas.
+          </p>
         </div>
 
         <TreeArticle
@@ -76,7 +80,58 @@ export default function Home() {
 
       <section id="about"></section>
 
-      <footer></footer>
+      <footer className="flex justify-between items-center py-6 px-4 sm:px-8 text-sm bg-base-200">
+        <Logo size="sm" />
+
+        <div className="flex flex-col gap-1">
+          <h2 className="mb-1 text-base font-bold">Tema</h2>
+
+          <Link href="/#tree" className="hover:underline underline-offset-2">
+            Árvore
+          </Link>
+          <Link
+            href="/tree/seed"
+            className="hover:underline underline-offset-2"
+          >
+            Semente
+          </Link>
+          <Link
+            href="/tree/leaf"
+            className="hover:underline underline-offset-2"
+          >
+            Folha
+          </Link>
+          <Link
+            href="/tree/flower"
+            className="hover:underline underline-offset-2"
+          >
+            Flor
+          </Link>
+          <Link
+            href="/tree/fruit"
+            className="hover:underline underline-offset-2"
+          >
+            Fruta
+          </Link>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <h2 className="mb-1 text-base font-bold">Desenvolvido por</h2>
+
+          <a
+            href="http://linktr.ee/gabriel_vs_frasao"
+            className="hover:underline underline-offset-2"
+          >
+            Gabriel VS Frasão
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gabriel-oliveira-926599238"
+            className="hover:underline underline-offset-2"
+          >
+            OliveiraOS
+          </a>
+        </div>
+      </footer>
     </>
   );
-};
+}
